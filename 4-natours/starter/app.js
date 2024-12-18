@@ -5,7 +5,7 @@ const app = express();
 const tourRoute = require('./routes/tourRoutes');
 const userRoute = require('./routes/userRoutes');
 
-// Middleware
+// Middleware application level
 app.use(morgan('dev'));
 app.use(express.json());
 
@@ -19,7 +19,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// Route
+// Route mounted
 app.use('/api/v1/tours', tourRoute);
 app.use('/api/v1/users', userRoute);
 

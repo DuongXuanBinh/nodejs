@@ -4,14 +4,15 @@
   "description": "learning node, express and mongoDB",
   "main": "app.js",
   "scripts": {
-    "start:dev": "nodemon server.js",
-    "start:prod": "NODE_ENV=production nodemon server.js"
+    "start": "nodemon server.js",
+    "start:prod": "SET NODE_ENV=production && nodemon server.js"
   },
   "author": "BinhDX",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "mongoose": "^5.13.23",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
@@ -24,5 +25,8 @@
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.37.2",
     "prettier": "^3.4.2"
+  },
+  "engines": {
+    "node": ">=10.0.0"
   }
 }
